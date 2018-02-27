@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddMove(name-"addmove", method="post",action="/addmove")
+        input#inputName(type="text", placeholder="Move Name", name="movename")
+        input#inputYoutube(type="text", placeholder="Move Link", name="movelink")
+        input#inputStart(type="text", placeholder="Start Position", name="start")
+        input#inputUserEnd(type="text", placeholder="End Position", name="end")
+        select
+            option(selected disabled) Start Position
+            option open
+            option closed
+            option hammerlock
+            option titanic 
+        select
+            option(selected disabled) End Position
+            option open
+            option closed
+            option hammerlock
+            option titanic 
+        select 
+            option(selected disabled) Involves
+            option leads right turn
+            option leads left turn
+            option change places
+            option follows travelling turn
+        button#btnSubmit(type="submit") submit
+        

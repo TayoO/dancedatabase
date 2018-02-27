@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1.  
+    Dance Database
+  u1
+    each move, i in dancemoves
+      li
+        a(href=move.youtube)=move.name
+        
